@@ -47,6 +47,12 @@ public:
     }
 
     // 移动赋值运算符
+    // SmartPointer<int> ptr3;
+    // ptr3 = std::move(ptr1); 
+    // 移动赋值运算符被调用，ptr1 的资源所有权被移动给 ptr3
+    //std::move()本身只是一个转换函数，它将其参数转换为右值引用，从而告诉编译器可以对其进行移动操作。std::move()并不会自动调用移动赋值运算符。
+    // 在上面的例子中，std::move(ptr1)将ptr1转换为右值引用，然后将这个右值引用传递给移动赋值运算符。
+    // 移动赋值运算符
     SmartPointer<T>& operator=(SmartPointer<T>&& other) noexcept {
         if (this != &other) {
             delete ptr;
