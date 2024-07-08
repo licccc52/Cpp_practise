@@ -1,7 +1,7 @@
 #include <iostream>
 
 //单例模式是指在整个系统生命周期内，保证一个类只能产生一个实例，确保该类的唯一性。
-
+//测试
 
 class Singleton {
 public:
